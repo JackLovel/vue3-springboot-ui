@@ -1,0 +1,25 @@
+{
+  "name": "rspack-vue-starter",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "rspack serve",
+    "build": "rspack build"
+  },
+  "dependencies": {
+    "element-plus": "^2.4.2",
+    "vue": "3.2.45"
+  },
+  "devDependencies": {
+    "@rspack/cli": "0.3.14",
+    "@rspack/core": "0.3.14",
+    "unplugin-auto-import": "^0.17.1",
+    "unplugin-vue-components": "^0.25.2",
+    "vue-loader": "^17.3.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
