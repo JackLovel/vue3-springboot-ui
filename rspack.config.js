@@ -1,5 +1,6 @@
 const rspack = require("@rspack/core");
 const { VueLoaderPlugin } = require("vue-loader");
+const path = require("path");
 // const AutoImport = require('unplugin-auto-import/webpack')
 // const Components = require('unplugin-vue-components/webpack')
 // const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
@@ -15,12 +16,6 @@ const config = {
 		new rspack.HtmlRspackPlugin({
 			template: "./index.html"
 		}),
-		// AutoImport({
-		// 	resolvers: [ElementPlusResolver()],
-		// }),
-		// Components({
-		// 	resolvers: [ElementPlusResolver()],
-		// }),
 	],
 	module: {
 		rules: [
@@ -34,8 +29,30 @@ const config = {
 			{
 				test: /\.svg/,
 				type: "asset/resource"
-			}
+			},
+			{
+				test: /\.scss$/,
+				use: ["sass-loader"],
+				type: "css",
+			},
 		]
+	},
+	devServer: {
+		proxy: {
+			'/api': {
+				target: 'http://localhost:39',
+				changeOrigin: true,
+				pathRewrite: {
+					'^/api': ''
+				}
+			}
+		}
+	},
+	resolve: {
+		alias: {
+			'@components': path.resolve(__dirname, 'src/components/'),
+			'@styles': path.resolve(__dirname, 'src/styles/'),
+		}
 	}
 };
 module.exports = config;

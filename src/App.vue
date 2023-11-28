@@ -1,12 +1,11 @@
 <script setup>
-import { ref } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import LoginVue from "@components/Login.vue";
 </script>
 
 <template>
-	<HelloWorld/>
+	<div>
+		<LoginVue />
+	</div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

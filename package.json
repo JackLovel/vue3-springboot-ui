@@ -9,15 +9,17 @@
     "build": "rspack build"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.1.0",
+    "@element-plus/icons-vue": "^2.3.1",
     "axios": "^1.6.2",
-    "element-plus": "^2.4.2",
-    "vue": "3.2.45"
+    "element-plus": "^2.4.3",
+    "vue": "3.2.45",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@rspack/cli": "0.3.14",
     "@rspack/core": "0.3.14",
     "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
     "unplugin-auto-import": "^0.17.1",
     "unplugin-vue-components": "^0.25.2",
     "vue-loader": "^17.3.1"
