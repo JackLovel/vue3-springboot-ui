@@ -35,6 +35,10 @@ const config = {
 				use: ["sass-loader"],
 				type: "css",
 			},
+			{
+				test: /\.png/,
+				type: 'asset/inline',
+			},
 		]
 	},
 	devServer: {
@@ -52,6 +56,9 @@ const config = {
 		alias: {
 			'@components': path.resolve(__dirname, 'src/components/'),
 			'@styles': path.resolve(__dirname, 'src/styles/'),
+			'@api': path.resolve(__dirname, 'src/api/'),
+			'@assets': path.resolve(__dirname, 'src/assets/'),
+			'@views': path.resolve(__dirname, 'src/views/')
 		}
 	}
 };
