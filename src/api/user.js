@@ -14,7 +14,7 @@ export const userRegisterService = (registerData) => {
 export const userLoginService = (loginData) => {
     // 存放查询字符串
     const params = new URLSearchParams()
-    for (let key in registerData) {
+    for (let key in loginData) {
         params.append(key, loginData[key])
     }
     return request.post('/user/login', params)

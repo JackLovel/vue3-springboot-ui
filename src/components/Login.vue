@@ -65,6 +65,7 @@
 <script setup>
 import { User, Lock } from '@element-plus/icons-vue'
 import { ref } from 'vue'
+import { ElMessage } from 'element-plus';
 const isRegister = ref(false)
 
 const registerData = ref({
@@ -99,20 +100,16 @@ const rules = {
 }
 
 //调用后台接口,完成注册
-import { userRegisterService } from '../api/user.js'
+import { userRegisterService, userLoginService } from '../api/user.js'
 const register = async () => {
     let result = await userRegisterService(registerData.value);
-    if (result.code === 0) {
-        alert(result.msg ? result.msg : '注册成功');
-    } else {
-        alert('注册失败')
-    }
-    alert(result.msg ? result.msg : '注册成功');
+    ElMessage.success(result.msg ? result.msg : '注册成功');
 }
 
 
-const login = () => {
-
+const login = async () => {
+    let result = await userLoginService(registerData.value);
+    ElMessage.success(result.msg ? result.msg : '登陆成功');
 }
 
 //定义函数,清空数据模型的数据
