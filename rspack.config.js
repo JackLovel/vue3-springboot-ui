@@ -50,7 +50,8 @@ const config = {
 					'^/api': ''
 				}
 			}
-		}
+		},
+		historyApiFallback: true
 	},
 	resolve: {
 		alias: {
@@ -59,7 +60,8 @@ const config = {
 			'@api': path.resolve(__dirname, 'src/api/'),
 			'@assets': path.resolve(__dirname, 'src/assets/'),
 			'@views': path.resolve(__dirname, 'src/views/'),
-			'@router': path.resolve(__dirname, 'src/router/')
+			'@router': path.resolve(__dirname, 'src/router/'),
+			'@store': path.resolve(__dirname, 'src/store/')
 		}
 	}
 };

@@ -105,11 +105,16 @@ const register = async () => {
     let result = await userRegisterService(registerData.value);
     ElMessage.success(result.msg ? result.msg : '注册成功');
 }
-
-
+import { useTokenStore } from '@store/token.js';
+import { useRouter } from 'vue-router'
+const tokenStore = useTokenStore()
+const router = useRouter()
 const login = async () => {
     let result = await userLoginService(registerData.value);
     ElMessage.success(result.msg ? result.msg : '登陆成功');
+    // 把得到的token 存储到pinia中
+    tokenStore.setToken(result.data)
+    router.push('/')
 }
 
 //定义函数,清空数据模型的数据
