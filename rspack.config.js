@@ -58,7 +58,8 @@ const config = {
 			'@styles': path.resolve(__dirname, 'src/styles/'),
 			'@api': path.resolve(__dirname, 'src/api/'),
 			'@assets': path.resolve(__dirname, 'src/assets/'),
-			'@views': path.resolve(__dirname, 'src/views/')
+			'@views': path.resolve(__dirname, 'src/views/'),
+			'@router': path.resolve(__dirname, 'src/router/')
 		}
 	}
 };

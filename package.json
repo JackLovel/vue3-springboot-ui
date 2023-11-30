@@ -16,8 +16,8 @@
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@rspack/cli": "0.3.14",
-    "@rspack/core": "0.3.14",
+    "@rspack/cli": "0.4.1",
+    "@rspack/core": "0.4.1",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.2",
     "unplugin-auto-import": "^0.17.1",
